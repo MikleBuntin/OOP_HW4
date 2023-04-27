@@ -9,6 +9,11 @@ public class Teacher extends User{
     public Teacher(String firstName, String secondName, String patronymic, String dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
     }
+    public Teacher(String firstName, String secondName, String patronymic, String dateOfBirth, Long teacherId) {
+        super(firstName, secondName, patronymic, dateOfBirth);
+        this.teacherId = teacherId;
+    }
+
 
     public Long getTeacherId() {
         return teacherId;
@@ -23,5 +28,14 @@ public class Teacher extends User{
         public int compare(Object o1, Object o2) {
             return 0;
         }
+    }
+    public String toString() {
+        return "Teacher: " + '\n' + "{" +
+                "TeacherId='" + teacherId +'\'' +
+                ", firstName='" + super.getFirstName() + '\'' +
+                ", secondName='" + super.getSecondName() + '\'' +
+                ", patronymic='" + super.getPatronymic() + '\'' +
+                ", dateOfBirth=" + super.getDateOfBirth() +
+                '}';
     }
 }

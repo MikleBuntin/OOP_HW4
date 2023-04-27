@@ -1,6 +1,7 @@
 package ru.gb.oseminar.data;
 
 import ru.gb.oseminar.view.StudentView;
+import ru.gb.oseminar.view.TeacherView;
 
 import java.util.List;
 
@@ -14,5 +15,7 @@ public class Main {
         StudentView studentView1 = new StudentView();
         studentView1.sendOnConsole(List.of(new Student("St1", "st2", "st3", "12345")));
 
+        TeacherView teacherView1 = new TeacherView();
+        teacherView1.sendOnConsole(List.of(new Teacher("St1", "st2", "st3", "12345")));
     }
 }

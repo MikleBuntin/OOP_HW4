@@ -14,6 +14,7 @@ public class TeacherView implements UserView<Teacher> {
     public void sendOnConsole(List<Teacher> teacherList) {
         for (Teacher user : teacherList) {
             logger.info(user.toString());
+            System.out.println(user.toString());
         }
     }
 }
